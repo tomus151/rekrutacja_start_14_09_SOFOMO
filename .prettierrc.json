@@ -1,0 +1,12 @@
+{
+  "useTabs": false,
+  "printWidth": 120,
+  "tabWidth": 4,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "jsxBracketSameLine": false,
+  "bracketSpacing": true,
+  "noSemi": true,
+  "rcVerbose": true,
+  "editor.formatOnSave": true
+}
