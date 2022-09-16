@@ -33,7 +33,7 @@ const {
 const SearchInfo = () => {
     const { searchValues } = useSelector(selectGetHistory);
     const [, { data, isLoading, isUninitialized }] = useGetIpStackMutation({
-        fixedCacheKey: process.env.REACT_APP_FIXED_CASH_KEY
+        fixedCacheKey: "qwertyuiop1234567890"
     });
 
     const generateContent = () => {
