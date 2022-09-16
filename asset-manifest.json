@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/rekrutacja_start_14_09_SOFOMO/static/css/main.f2b86ebc.css",
-    "main.js": "/rekrutacja_start_14_09_SOFOMO/static/js/main.fd13dec6.js",
+    "main.js": "/rekrutacja_start_14_09_SOFOMO/static/js/main.4b498290.js",
     "static/media/loader.gif": "/rekrutacja_start_14_09_SOFOMO/static/media/loader.a1a996746e5e48352c81.gif",
     "static/media/marker.png": "/rekrutacja_start_14_09_SOFOMO/static/media/marker.4756d1b37da746543bdc.png",
     "index.html": "/rekrutacja_start_14_09_SOFOMO/index.html",
     "main.f2b86ebc.css.map": "/rekrutacja_start_14_09_SOFOMO/static/css/main.f2b86ebc.css.map",
-    "main.fd13dec6.js.map": "/rekrutacja_start_14_09_SOFOMO/static/js/main.fd13dec6.js.map"
+    "main.4b498290.js.map": "/rekrutacja_start_14_09_SOFOMO/static/js/main.4b498290.js.map"
   },
   "entrypoints": [
     "static/css/main.f2b86ebc.css",
-    "static/js/main.fd13dec6.js"
+    "static/js/main.4b498290.js"
   ]
 }
