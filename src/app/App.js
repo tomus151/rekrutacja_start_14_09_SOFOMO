@@ -10,6 +10,7 @@ import { useGetIpQuery } from "../api/ipInfo";
 import SearchInfo from "../components/SearchInfo";
 import { selectGetHistory } from "../store/slices/historySlice";
 import { defaultMapPositionConstant } from "../constants/mapConstants";
+import { useGetIpStackMutation } from "../api/ipStackApi";
 
 const StyledContainer = styled.div`
     display: grid;
@@ -41,23 +42,28 @@ const App = () => {
     const [userInfo, setUserInfo] = useState({ ip: "" });
 
     const { data: userIp } = useGetIpQuery();
+    const [startFetching, { data, isSuccess }] = useGetIpStackMutation();
 
     const { searchValues } = useSelector(selectGetHistory);
 
     const { ZOOM, LAT, LNG } = defaultMapPositionConstant;
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition((position) => {
-            setUserLocation({
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            });
-        });
-    }, []);
+        if (userIp?.ip) {
+            setUserInfo(userIp.ip);
+            startFetching(userIp.ip);
+        }
+    }, [userIp?.ip]);
 
     useEffect(() => {
-        if (userIp?.ip) return setUserInfo(userIp.ip);
-    }, [userIp?.ip]);
+        if (isSuccess && !data.error) {
+            setUserLocation({
+                lat: data.latitude,
+                lng: data.longitude
+            });
+        }
+        if (data?.error) alert("ilość zapytań w darmowym planie wykorzystana zmień klucz api");
+    }, [isSuccess]);
 
     return (
         <StyledContainer>

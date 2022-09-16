@@ -9,7 +9,7 @@ export const lang = {
     searchBar: {
         BUTTON_TEXT: "Wyszukaj Lokalizację",
         PLACEHOLDER: "Wpisz url lub IP",
-        ALLERT_MESSAGE: "Proszę o wpisanie IP lub URL w inpucie"
+        ALERT_MESSAGE: "Proszę o wpisanie IP lub URL w inpucie"
     },
     searchInfo: {
         SEARCH_SOMETHING: "Wyszukaj coś",
